@@ -9,7 +9,7 @@ public class Task5 {
         int secondFib = 1;
 
 
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 9; i++) {
 
 
             int nextFib;
