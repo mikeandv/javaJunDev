@@ -10,7 +10,7 @@ public class Task_4 {
         double m;
         double n;
 
-        m = 0;
+        m = -7;
         n = 20;
 
         double mDistance = startPoint - m;
