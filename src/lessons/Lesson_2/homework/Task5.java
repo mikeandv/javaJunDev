@@ -19,7 +19,7 @@ public class Task5 {
 
             System.out.print(nextFib + " ");
 
-
+////
         }
     }
 }

@@ -9,7 +9,7 @@ public class Task3 {
             num *= 2;
 
             System.out.print(num + " ");
-
+///
         }
     }
 }

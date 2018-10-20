@@ -5,6 +5,7 @@ public class Task2 {
 
         for (int i = 90; i >= 0; i -=5) {
             System.out.print(i + " ");
+            //
         }
     }
 }

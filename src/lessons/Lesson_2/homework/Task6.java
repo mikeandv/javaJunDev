@@ -22,4 +22,5 @@ public class Task6 {
         }
         System.out.println("В одном рулоне " + luckyTicketCNT + " счастливых билетов.");
     }
+    ////
 }

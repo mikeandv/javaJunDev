@@ -7,6 +7,6 @@ public class Task4 {
         Scanner in = new Scanner(System.in);
         int number = in.nextInt();
 
-
+///
     }
 }
