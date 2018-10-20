@@ -1,4 +1,4 @@
-package fix;
+package lessons.lesson_2.homework;
 
 public class Task6 {
     public static void main(String[] args) {
@@ -22,5 +22,4 @@ public class Task6 {
         }
         System.out.println("В одном рулоне " + luckyTicketCNT + " счастливых билетов.");
     }
-    ////
 }

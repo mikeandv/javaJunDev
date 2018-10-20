@@ -1,4 +1,4 @@
-package fix;
+package lessons.lesson_2;
 
 //import java.util.Scanner;
 

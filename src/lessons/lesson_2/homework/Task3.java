@@ -1,4 +1,4 @@
-package fix;
+package lessons.lesson_2.homework;
 
 public class Task3 {
     public static void main(String[] args) {
@@ -9,7 +9,6 @@ public class Task3 {
             num *= 2;
 
             System.out.print(num + " ");
-///
         }
     }
 }
