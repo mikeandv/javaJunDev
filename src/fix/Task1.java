@@ -1,4 +1,4 @@
-package lessons.lesson_1.lessonwork;
+package fix;
 
 public class Task1 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package lessons.lesson_2.homework;
+package fix;
 
 import java.util.Scanner;
 
@@ -7,6 +7,6 @@ public class Task4 {
         Scanner in = new Scanner(System.in);
         int number = in.nextInt();
 
-
+///
     }
 }
