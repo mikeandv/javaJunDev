@@ -1,4 +1,4 @@
-package lessons.Lesson_2.homework;
+package lessons.lesson_1.lessonwork;
 
 public class Task1 {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class Task1 {
     int a = -6;
     int b = -9;
     int c = 8;
-
+/////
 
 
         if ((a < b) && (a < c)) {
