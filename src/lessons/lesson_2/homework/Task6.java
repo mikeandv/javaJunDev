@@ -11,6 +11,9 @@ public class Task6 {
                     for (int g = 0; g < 10; g++){
                         for (int h = 0; h < 10; h++){
                             for (int k = 0; k < 10; k++){
+                                if ((i == 0) && (j == 0) && (f == 0) && (g == 0) && (h == 0) && (k == 0)) {
+                                    k = 1;
+                                }
                                 if ((i + j + f) == (g + h + k)){
                                     luckyTicketCNT++;
                                 }
