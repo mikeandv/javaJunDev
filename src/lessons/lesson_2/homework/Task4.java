@@ -24,7 +24,6 @@ public class Task4 {
             }
             //
 
-
             //Проверка НОД
             if (gcd(randomNum, number) > 1) {
                 System.out.println("Число " + number + " составное.");
