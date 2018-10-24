@@ -5,18 +5,20 @@ import java.util.Arrays;
 public class TaskString3 {
     public static void main(String[] args) {
         //дом 48, корпус 9, парадная 7, этаж 4
-        StringBuffer stringSt = new StringBuffer("дом 48, корпус 9_1, парадная 7, этаж 4 4h");
+        StringBuffer stringSt = new StringBuffer("дом 48, корпус 9_1, парадная 7, этаж 4 4");
         String strToArr;
         int arrInx = 0;
         int[] arr = new int[stringSt.length()];
 
-        for (int i = 0; i < stringSt.length() - 1; i++){
+        for (int i = 0; i < stringSt.length(); i++){
 
             if (Character.isDigit(stringSt.charAt(i))) {
                 strToArr = String.valueOf(stringSt.charAt(i));
 
                 int k = i + 1;
-                while ( (Character.isDigit(stringSt.charAt(k)) && (k < stringSt.length() - 1) ) ) {
+
+                while ( (i != stringSt.length() - 1) && ((Character.isDigit(stringSt.charAt(k))) && (k < stringSt.length() )) ) {
+
                     strToArr += String.valueOf(stringSt.charAt(k));
                     k++;
                     i++;
