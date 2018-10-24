@@ -37,7 +37,7 @@ public class TaskString1_2 {
             for (int j = i + 1; j < strBuff.length(); j++) {
                 if (strBuff.charAt(i) == strBuff.charAt(j)) {
                     strBuff.deleteCharAt(j);
-                    i -= i;
+                    j -= 1;
                 }
             }
         }
