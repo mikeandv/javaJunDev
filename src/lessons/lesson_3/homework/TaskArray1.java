@@ -13,6 +13,8 @@ public class TaskArray1 {
             System.out.print(arrInt[i] + " ");
         }
 
+        System.out.println();
+
         for (int i = 0; i < arrInt.length; i++) {
             System.out.println(arrInt[i]);
         }
