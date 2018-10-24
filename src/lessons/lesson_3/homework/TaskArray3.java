@@ -1,7 +1,5 @@
 package lessons.lesson_3.homework;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
