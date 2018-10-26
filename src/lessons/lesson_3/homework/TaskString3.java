@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class TaskString3 {
     public static void main(String[] args) {
         //дом 48, корпус 9, парадная 7, этаж 4
-        StringBuffer stringSt = new StringBuffer("дом 48, корпус 9_1, парадная 7, этаж 4 4");
+        StringBuffer stringSt = new StringBuffer("дом 48, корпус 9_1, парадная 7, этаж 4 477п");
         String strToArr;
         int arrInx = 0;
         int[] arr = new int[stringSt.length()];
