@@ -12,7 +12,6 @@ public class LinkedList implements List, Stack, Queue {
         } else if (index > size() + 1) {
             push(data);
             System.out.println("Индекс превышает размер листа, элемент добавлен в конец");
-
         } else {
             get(index).setData(data);
         }
@@ -20,6 +19,19 @@ public class LinkedList implements List, Stack, Queue {
 
     @Override
     public void remove(int index) {
+        if(isEmpty()) {
+            System.out.println("Список пуст, нечего удалять");
+        } else if(index > size()){
+            System.out.println("Нет элемента по заданному индексу");
+        } else {
+            if(get(index) == this.first) {
+                unshift();
+            } else if(get(index) == lastNode()) {
+                pop();
+            } else {
+                get(index - 1).setLink(get(index).getLink());
+            }
+        }
 
     }
 
@@ -33,8 +45,6 @@ public class LinkedList implements List, Stack, Queue {
             n = n.getLink();
         }
         return n;
-
-
     }
 
     @Override
@@ -68,9 +78,7 @@ public class LinkedList implements List, Stack, Queue {
         } else if(this.first.getLink() == null){
             setFirst(null);
         } else {
-            Node nFirst = this.first.getLink();
-            first.setLink(null);
-            setFirst(nFirst);
+            setFirst(this.first.getLink());
         }
     }
 
@@ -81,7 +89,6 @@ public class LinkedList implements List, Stack, Queue {
         } else {
             lastNode().setLink(new Node(data));
         }
-
     }
 
     @Override
@@ -106,8 +113,6 @@ public class LinkedList implements List, Stack, Queue {
 
     /*
     * Вспомогательные методы
-    *
-    *
     */
 
     private Node lastNode (){
@@ -116,7 +121,6 @@ public class LinkedList implements List, Stack, Queue {
             n = n.getLink();
         }
         return n;
-
     }
 
     private boolean isEmpty(){
@@ -133,7 +137,7 @@ public class LinkedList implements List, Stack, Queue {
         Node n = this.first;
 
         for (int i = 1; i != size() + 1; i++) {
-            System.out.println("Node = " + n.getData() + ", " + "Index = " + i);
+            System.out.println("Node = " + n + ", " + "Index = " + i);
             n = n.getLink();
         }
     }

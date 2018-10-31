@@ -11,22 +11,26 @@ public class Main {
         list1.shift(obj);
         list1.printList();
         System.out.println();
+//
+//
+//        list1.shift(obj);
+//        list1.printList();
+//        System.out.println();
+//        list1.shift(obj);
+//        list1.printList();
+//        System.out.println();
+//        list1.push(obj);
+//        list1.printList();
+//        System.out.println();
+//        list1.add(obj1,7);
+//        list1.printList();
+//        System.out.println();
+//        System.out.println(list1.get(5));
+//        list1.add(obj1,5);
+//        System.out.println(list1.get(5));
 
-
-        list1.shift(obj);
+        list1.remove(1);
         list1.printList();
-        System.out.println();
-        list1.shift(obj);
-        list1.printList();
-        System.out.println();
-        list1.push(obj);
-        list1.printList();
-        System.out.println();
-        list1.add(obj1,7);
-        list1.printList();
-        System.out.println(list1.get(5));
-        list1.add(obj1,5);
-        System.out.println(list1.get(5));
 
 //        System.out.println(list1.size());
 //
