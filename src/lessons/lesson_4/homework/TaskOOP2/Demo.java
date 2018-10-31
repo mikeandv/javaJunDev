@@ -10,7 +10,11 @@ public class Demo {
 
         list.print();
 
-        list.remove(11);
+        list.remove(1);
+        list.print();
+        list.remove(99);
+
+        list.add(55);
         list.print();
 
 

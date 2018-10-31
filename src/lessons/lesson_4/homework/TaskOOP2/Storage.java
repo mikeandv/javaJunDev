@@ -28,6 +28,10 @@ public class Storage {
     public void remove (int num) {
         Node n = first;
         while (n.nextN != null) {
+            if (n.value == num) {
+                first = n.nextN;
+                return;
+            }
             if (n.nextN.value == num){
                 n.nextN = n.nextN.nextN;
                 return;

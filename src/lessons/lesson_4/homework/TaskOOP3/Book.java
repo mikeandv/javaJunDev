@@ -18,6 +18,10 @@ public class Book {
         this.title = title;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     @Override
     public String toString() {
         return "\nBook{" +

@@ -15,7 +15,7 @@ public class DemoLib {
 
         System.out.println(libNew.toString());
         libNew.getBook(book2, 1);
-        System.out.println("" + libNew.getBookCNT(book2));
+        System.out.println("Количество книг \"" + book2.getTitle() + "\" равно " + libNew.getBookCNT(book2));
         System.out.println(libNew.toString());
 
         Book book3 = new Book(5, "IT");
