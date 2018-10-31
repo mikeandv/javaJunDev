@@ -8,12 +8,13 @@ public class LinkedList implements List, Stack, Queue {
     public void add(Object data, int index) {
 
         if(isEmpty()){
-            this.first = new Node(data);
-        } else if (preIndexNode(index) == null) {
+            shift(new Node(data));
+        } else if (index > size() + 1) {
+            push(data);
+            System.out.println("Индекс превышает размер листа, элемент добавлен в конец");
 
-            lastNode().setLink(new Node(data));
         } else {
-            preIndexNode(index).setLink(new Node(data));
+            get(index).setData(data);
         }
     }
 
@@ -23,7 +24,16 @@ public class LinkedList implements List, Stack, Queue {
     }
 
     @Override
-    public void get(int index) {
+    public Node get(int index) {
+        if (isEmpty())
+            return null;
+
+        Node n = this.first;
+        for (int i = 1; i < index; i++){
+            n = n.getLink();
+        }
+        return n;
+
 
     }
 
@@ -41,25 +51,35 @@ public class LinkedList implements List, Stack, Queue {
     }
 
     @Override
-    public void shift(Object node) {
-        if(isEmpty()){
-
+    public void shift(Object data) {
+        if(isEmpty()) {
+            setFirst(new Node(data));
+        } else {
+            Node n = new Node(data);
+            n.setLink(this.first);
+            setFirst(n);
         }
-
-
     }
 
     @Override
     public void unshift() {
-
+        if(isEmpty()){
+            System.out.println("Список пуст, нечего удалять");
+        } else if(this.first.getLink() == null){
+            setFirst(null);
+        } else {
+            Node nFirst = this.first.getLink();
+            first.setLink(null);
+            setFirst(nFirst);
+        }
     }
 
     @Override
-    public void push(Object node) {
+    public void push(Object data) {
         if (isEmpty()) {
-            this.first = new Node(node);
+            setFirst(new Node(data));
         } else {
-            lastNode().setLink(new Node(node));
+            lastNode().setLink(new Node(data));
         }
 
     }
@@ -72,7 +92,7 @@ public class LinkedList implements List, Stack, Queue {
 
         } else if(this.first.getLink() == null) {
 
-            this.first = null;
+            setFirst(null);
 
         } else {
 
@@ -90,16 +110,6 @@ public class LinkedList implements List, Stack, Queue {
     *
     */
 
-    private Node preIndexNode (int index) {
-        Node n = this.first;
-        int indexInner = 0;
-
-        while (indexInner != index){
-            n = n.getLink();
-        }
-        return n;
-    }
-
     private Node lastNode (){
         Node n = this.first;
         while (n.getLink() != null) {
@@ -115,8 +125,17 @@ public class LinkedList implements List, Stack, Queue {
         return false;
     }
 
-    public void setFirst(Node first) {
-        this.first = first;
+    private void setFirst(Node node) {
+        this.first = node;
     }
 
+    public void printList(){
+        Node n = this.first;
+
+        for (int i = 1; i != size() + 1; i++) {
+            System.out.println("Node = " + n.getData() + ", " + "Index = " + i);
+            n = n.getLink();
+        }
+    }
 }
+
