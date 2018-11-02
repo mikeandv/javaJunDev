@@ -1,7 +1,5 @@
 package lessons.lesson_7.homework.examtask;
 
-import java.util.Arrays;
-
 public class Pupil {
 
     private int id;
@@ -28,6 +26,7 @@ public class Pupil {
             this.exStatus = markDecision(this.mark);
         }
 
+        //Метод для принятия решения о сдаче экзамена
         public String markDecision(int mark) {
 
             if (mark >=3)
@@ -44,6 +43,9 @@ public class Pupil {
             return exStatus;
         }
     }
+    /*
+    * Метод установки результаттов экзамена
+     */
 
     public void setExams (String[] ex, int[] marks) {
         this.examResults = new ExamResult[ex.length];
