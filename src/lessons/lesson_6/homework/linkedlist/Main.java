@@ -7,6 +7,7 @@ public class Main {
         Object obj = new Object();
         Object obj1 = new Object();
 
+
         list1.shift(obj);
         list1.shift(obj);
         list1.printList();

@@ -32,7 +32,6 @@ public class LinkedList implements List, Stack, Queue {
                 get(index - 1).setLink(get(index).getLink());
             }
         }
-
     }
 
     @Override
