@@ -10,19 +10,19 @@ import java.util.regex.Pattern;
 
 public class RunCase {
     private final String[] REG = {
-            "\\s*([a-zA-Z]+)\\s*(\\=)\\s*(\\d+\\.\\d+|\\d+)\\s*",
+            "\\s*([a-zA-Z]+)\\s*(\\=)\\s*((\\-?|\\+?)\\d+\\.\\d+|(\\-?|\\+?)\\d+)\\s*",
             "\\s*([a-zA-Z]+)\\s*(\\=)\\s*([a-zA-Z]+)\\s*",
-            "([a-zA-Z]+|\\d+\\.\\d+|\\d+)(\\+)([a-zA-Z]+|\\d+\\.\\d+|\\d+)",
-            "([a-zA-Z]+|\\d+\\.\\d+|\\d+)(\\-)([a-zA-Z]+|\\d+\\.\\d+|\\d+)",
-            "([a-zA-Z]+|\\d+\\.\\d+|\\d+)(\\*)([a-zA-Z]+|\\d+\\.\\d+|\\d+)",
-            "([a-zA-Z]+|\\d+\\.\\d+|\\d+)(\\/)([a-zA-Z]+|\\d+\\.\\d+|\\d+)",
+            "\\s*([a-zA-Z]+|\\d+\\.\\d+|\\d+)\\s*(\\+)\\s*([a-zA-Z]+|\\d+\\.\\d+|\\d+)\\s*",
+            "\\s*([a-zA-Z]+|\\d+\\.\\d+|\\d+)\\s*(\\-)\\s*([a-zA-Z]+|\\d+\\.\\d+|\\d+)\\s*",
+            "\\s*([a-zA-Z]+|\\d+\\.\\d+|\\d+)\\s*(\\*)\\s*([a-zA-Z]+|\\d+\\.\\d+|\\d+)\\s*",
+            "\\s*([a-zA-Z]+|\\d+\\.\\d+|\\d+)\\s*(\\/)\\s*([a-zA-Z]+|\\d+\\.\\d+|\\d+)\\s*",
             "(.+)(.+)"};
 
     public void start() {
+        Calc cl = new Calc();
 
         while (true) {
 
-            Calc cl = new Calc();
             Double result = null;
 
             while (result == null) {
@@ -32,7 +32,7 @@ public class RunCase {
                     result = operation(StInput.read(), cl);
 
                 } catch (Exception e) {
-                    System.out.println(e.getMessage());
+                    System.out.println("# " + e.getMessage());
                 }
             }
 
