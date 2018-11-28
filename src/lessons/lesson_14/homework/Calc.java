@@ -2,8 +2,6 @@ package lessons.lesson_14.homework;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Calc {
     private Map<String, Double> map;
@@ -14,7 +12,6 @@ public class Calc {
     }
 
     public double addition (String s1, String s2) throws Exception{
-
         return checkedValues(s1) + checkedValues(s2);
     }
 
@@ -35,10 +32,6 @@ public class Calc {
     public void mapAdd(String s, Double d) {
         this.map.put(s,d);
     }
-
-//    public Map<String, Double> getMap() {
-//        return map;
-//    }
 
     public void setValue(String s1, String s2) throws Exception{
 
