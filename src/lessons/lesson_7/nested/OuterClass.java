@@ -22,7 +22,7 @@ public class OuterClass {
         public void someMeth() {
             statVal += 1;
             System.out.println(statVal);
-            //System.out.println(value); //Нельзя обратится к нестатическим метода/переменным внешнего класса
+            //System.out.println(setValue); //Нельзя обратится к нестатическим метода/переменным внешнего класса
         }
 
     }

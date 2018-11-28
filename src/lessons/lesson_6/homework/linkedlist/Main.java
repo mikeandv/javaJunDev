@@ -4,12 +4,12 @@ public class Main {
     public static void main(String[] args) {
 
         LinkedList list1 = new LinkedList();
-        Object obj = new Object();
-        Object obj1 = new Object();
+        String obj = "st1"; //= new Object();
+        String obj1 = "st2"; //= new Object();
 
 
         list1.shift(obj);
-        list1.shift(obj);
+        list1.shift(obj1);
         list1.printList();
         System.out.println();
 //

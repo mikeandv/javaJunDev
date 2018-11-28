@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         Object ff = new Object();
-        FileWorker f = new FileWorker(ff);
+        FileWorker f = new FileWorker(ff,"fffff.txt");
 
 
     }

@@ -1,6 +1,6 @@
 package lessons.lesson_6.homework.filereader;
 
 public interface Handler {
-    void writeFile();
-    Object readFile(Object file);
+    boolean writeFile(Object j, String st);
+    String[] readFile(Object file);
 }

@@ -1,6 +1,5 @@
 package lessons.lesson_11.homework.task1;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class StInput {

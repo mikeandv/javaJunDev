@@ -1,19 +1,15 @@
 package lessons.lesson_6.homework.filereader;
 
-public class TXTFileHandler extends FileWorker implements Handler{
+public class TXTFileHandler implements Handler{
 
-    public TXTFileHandler(Object file) {
-        super(file);
+
+    @Override
+    public boolean writeFile(Object j, String st) {
+        return false;
     }
 
     @Override
-    public void writeFile() {
-        System.out.println("Прочитал TXT");
-
-    }
-
-    @Override
-    public Object readFile(Object file) {
-        return null;
+    public String[] readFile(Object file) {
+        return new String[0];
     }
 }

@@ -5,22 +5,24 @@ import java.util.regex.Pattern;
 
 public class FileWorker {
     private Object file;
+    private String fileName;
 
-    public FileWorker(Object file) {
+    public FileWorker(Object file, String fileName) {
         this.file = file;
+        this.fileName = fileName;
     }
 
-    public String getFileName(){
-
-        String fileName = "configfile.xml";
-        //Реализация получения имени файла
+    public String getFileName() {
         return fileName;
     }
 
-    private boolean test(String testString){
-        Pattern p = Pattern.compile(".+\\.xml$");
+
+    private boolean test(String testString, String pattern){
+        Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(testString);
         return m.matches();
+
+        //".+\\.xml$"
     }
 }
 

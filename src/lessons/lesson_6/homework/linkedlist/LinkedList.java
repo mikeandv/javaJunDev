@@ -136,7 +136,7 @@ public class LinkedList implements List, Stack, Queue {
         Node n = this.first;
 
         for (int i = 1; i != size() + 1; i++) {
-            System.out.println("Node = " + n + ", " + "Index = " + i);
+            System.out.println("Node = " + n.getData() + ", " + "Index = " + i);
             n = n.getLink();
         }
     }
