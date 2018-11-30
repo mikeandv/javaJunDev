@@ -15,12 +15,12 @@ public class StInput {
             try {
                 s = new Scanner(System.in);
                 str = s.nextLine();
-                if (str == "")
+                if (str.equals(""))
                     throw new IllegalArgumentException("Ошибка! Введена пустая строка");
                 isTry = false;
             }
             catch (IllegalArgumentException e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }
         return str;
