@@ -31,9 +31,6 @@ public class Task2 {
         } catch (IOException e){
             System.out.println(e.getMessage());
         }
-
-
-
     }
 
     public void fileGlue (File[] files, String newName) {
@@ -50,6 +47,7 @@ public class Task2 {
                 int len;
 
                 while ( (len = buffIn.read(buff)) > 0) {
+
                     String[] fileName = files[i].getName().split("\\.");
                     File newFile = new File(files[i].getParent(), (newName + "." + fileName[1]));
 
