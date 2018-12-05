@@ -3,31 +3,47 @@ package lessons.lesson_15.homework;
 import lessons.lesson_11.homework.task1.StInput;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Task1 {
 
-    public static void fileCopy(File f1, File f2) {
+    public static int fileCopy(File f1, File f2) {
         int cnt = 0;
+        List<Byte> l = new ArrayList<Byte>();
 
         try(InputStream inFile = new FileInputStream(f1);
             OutputStream outFile = new FileOutputStream(f2)) {
 
-            byte[] buffer = new byte[1024];
-            int len;
+            StringBuilder sb = new StringBuilder();
 
-            while ((len = inFile.read(buffer)) > 0) {
-                outFile.write(buffer, 0, len);
-                cnt =+ len;
+
+            while (inFile.available() > 0) {
+
+                l.add((byte) inFile.read());
+                cnt++;
             }
+
+            byte[] bytes = new byte[l.size()];
+            int i = 0;
+
+            for(byte b : l) {
+                bytes[i] = b;
+                i++;
+            }
+
+            outFile.write(bytes);
+
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        System.out.println(cnt);
+
+        return cnt;
 
     }
 
     public static void main(String[] args) {
-        fileCopy(new File("files/"+ StInput.read()), new File("files/"+ StInput.read()));
+        System.out.println(fileCopy(new File("files/"+ StInput.read()), new File("files/"+ StInput.read())));
     }
 
 }

@@ -1,6 +1,6 @@
-package lessons.lesson_16.printApp;
+package lessons.chat;
 
-        import java.io.Serializable;
+import java.io.Serializable;
 
 public class Message implements Serializable {
     private String messText;

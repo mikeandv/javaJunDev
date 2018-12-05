@@ -2,7 +2,7 @@ package lessons.lesson_15.homework;
 
 import java.io.*;
 
-public class Tast3 {
+public class Task3 {
 
     public void fileEncrypt(File file, String pass) {
 
@@ -67,7 +67,7 @@ public class Tast3 {
     }
 
     public static void main(String[] args) {
-        Tast3 t = new Tast3();
+        Task3 t = new Task3();
 
 //        File f = new File("files/test.txt");
 //        t.fileEncrypt(f, "Шифр");
