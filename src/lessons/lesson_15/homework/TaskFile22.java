@@ -36,7 +36,7 @@ public class TaskFile22 {
         }
     }
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args){
 
         if(args != null && args.length > 0) {
             String dir = args[0];
