@@ -3,6 +3,7 @@ package lessons.patterns.command;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 public class TextProcessor {
@@ -17,6 +18,7 @@ public class TextProcessor {
     private final String PROCESS = "/process";
     private final String CANCEL = "/cancel";
     private final String REPEAT = "/repeat";
+    private final String UNSUPCOMMAND = "\\/.*";
 
     private void executeCommand(Command command) {
         if(command.execute()) {
@@ -32,6 +34,8 @@ public class TextProcessor {
         while (true) {
             String str = in.nextLine();
 
+
+
             switch (str) {
                 case EXIT:
                     executeCommand(new ExitCommand(this));
@@ -40,12 +44,16 @@ public class TextProcessor {
                     executeCommand(new ProcessCommand(this));
                     break;
                 case CANCEL:
-                    //executeCommand(new CancelCommand(this));
+                    executeCommand(new CancelCommand(this));
                     break;
                 case REPEAT:
                     executeCommand(new RepeatCommand(this));
                     break;
                 default:
+                    if(str.matches(UNSUPCOMMAND)) {
+                        System.out.println("Некоррекная команда");
+                        break;
+                    }
                     strList.add(str);
             }
         }
@@ -70,9 +78,22 @@ public class TextProcessor {
     public void addStrToTmp(String s) {
         this.strListTmp.add(s);
     }
+    public void addStrToTmp(List<String> s) {
+        for (String str: s) {
+            this.strListTmp.add(str);
+        }
+    }
 
     public void removeAllFromStrList(List<String> ls) {
         this.strList.removeAll(ls);
+    }
+    public void removeAllTmp() {
+
+        ListIterator<String> listIterator = this.strListTmp.listIterator();
+        while(listIterator.hasNext()){
+            listIterator.next();
+            listIterator.remove();
+        }
     }
 
 

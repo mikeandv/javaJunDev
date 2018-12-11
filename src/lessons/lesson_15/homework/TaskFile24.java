@@ -135,22 +135,24 @@ public class TaskFile24 {
 
     private void operationSelect(String[] arr) throws Exception {
 
+
         File file = new File("files/" + ConsoleHelper.readString());
 
         switch (arr[0]) {
             case "-u":
                 if (arr.length < 5 || arr.length > 5)
-                    throw new Exception("Неизветные агрументы");
+                    throw new Exception("Некорректные агрументы");
+                //if(arr[0].length() < 8 || arr[2])
                 updateRow(file, arr[1], arr[2], arr[3], arr[4]);
                 break;
             case "-d":
                 if (arr.length > 2)
-                    throw new Exception("Неизветные агрументы");
+                    throw new Exception("Некорректные агрументы");
                 deleteRow(file, arr[1]);
                 break;
             case "-c":
                 if (arr.length < 4 || arr.length > 4)
-                    throw new Exception("Неизветные агрументы");
+                    throw new Exception("Некорректные агрументы");
                 insertRow(file, arr[1], arr[2], arr[3]);
                 break;
             default:

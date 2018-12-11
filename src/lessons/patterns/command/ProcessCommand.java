@@ -21,6 +21,12 @@ public class ProcessCommand extends Command {
 
         if(this.processor.getStrList().isEmpty())
             return false;
+        if(!this.processor.getHistory().isEmpty()
+                && this.processor.getHistory().lastElem().name().equals("ProcessCommand"))
+        {
+            this.processor.removeAllTmp();
+            return false;
+        }
 
         StringBuilder sb = new StringBuilder();
 

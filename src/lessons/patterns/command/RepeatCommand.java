@@ -22,22 +22,20 @@ public class RepeatCommand extends Command {
         System.out.println(name());
 
         if(this.processor.getHistory().isEmpty()) {
-            //ничего не делаем
+            return false; //ничего не делаем
         } else if(!this.processor.getStrList().isEmpty()) {
             write(this.processor.getFileOut(), this.processor.getStrList());
             write(this.processor.getFileOut(), this.processor.getStrList());
-            this.processor.removeAllFromStrList(this.processor.getStrListTmp());
-        }
 
+            this.processor.addStrToTmp(this.processor.getStrList()); //перенос записей в темп
+            this.processor.addStrToTmp(this.processor.getStrList()); //перенос записей в темп
 
+            this.processor.removeAllFromStrList(this.processor.getStrListTmp()); // удаление записей ил листа
 
-            if(this.processor.getHistory().lastElem().name().equals("ProcessCommand")
+        } else if(this.processor.getHistory().lastElem().name().equals("ProcessCommand")
                 && !this.processor.getStrListTmp().isEmpty()) {
-
-
+            write(this.processor.getFileOut(), this.processor.getStrListTmp());
         }
-
-
         return true;
     }
 
