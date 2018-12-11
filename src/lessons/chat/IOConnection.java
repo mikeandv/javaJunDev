@@ -8,9 +8,9 @@ import java.net.Socket;
 import java.net.SocketAddress;
 
 public class IOConnection {
-    Socket socket;
-    ObjectOutputStream out;
-    ObjectInputStream in;
+    private Socket socket;
+    private ObjectOutputStream out;
+    private ObjectInputStream in;
 
     public IOConnection(Socket socket) {
         this.socket = socket;
@@ -30,7 +30,7 @@ public class IOConnection {
         }
     }
 
-    public Message receive(Socket socket) {
+    public Message receive(/*Socket socket*/) {
 
         Message message = null;
         try {
