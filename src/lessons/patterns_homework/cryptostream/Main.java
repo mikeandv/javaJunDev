@@ -1,7 +1,6 @@
-package lessons.patterns_homework.CryptoStream;
+package lessons.patterns_homework.cryptostream;
 
 import lessons.chat.ConsoleHelper;
-import sun.nio.cs.UTF_32;
 
 import java.io.*;
 import java.util.ArrayList;

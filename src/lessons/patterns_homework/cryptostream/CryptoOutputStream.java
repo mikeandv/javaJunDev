@@ -1,4 +1,4 @@
-package lessons.patterns_homework.CryptoStream;
+package lessons.patterns_homework.cryptostream;
 
 import java.io.FilterOutputStream;
 import java.io.IOException;
@@ -17,8 +17,7 @@ public class CryptoOutputStream extends FilterOutputStream {
     @Override
     public void write(int b) throws IOException {
 
-        int p = (bytePass[cryptoP() % bytePass.length]);
-        int r = (b ^ p);
+        int r = b^(bytePass[cryptoP() % bytePass.length]);
         ++i;
         super.write(r);
     }

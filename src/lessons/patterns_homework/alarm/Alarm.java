@@ -1,4 +1,4 @@
-package lessons.patterns_homework.Alarm;
+package lessons.patterns_homework.alarm;
 
 public interface Alarm {
 

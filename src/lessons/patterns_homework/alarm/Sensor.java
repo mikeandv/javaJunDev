@@ -1,4 +1,4 @@
-package lessons.patterns_homework.Alarm;
+package lessons.patterns_homework.alarm;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,8 +63,6 @@ public class Sensor {
             int rand = (int) (Math.random()* 100);
 
                 temp += rand;
-
-
 
                 sensor.tempUpDown(temp);
             }

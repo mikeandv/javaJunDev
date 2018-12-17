@@ -1,4 +1,4 @@
-package lessons.patterns_homework.CryptoStream;
+package lessons.patterns_homework.cryptostream;
 
 import java.io.FilterInputStream;
 import java.io.IOException;
