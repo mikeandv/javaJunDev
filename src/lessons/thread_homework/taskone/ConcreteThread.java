@@ -14,7 +14,6 @@ public class ConcreteThread implements Runnable{
     @Override
     public void run() {
 
-        System.out.println("поток запущен");
         Map<String, Integer> tmpMap = new HashMap<>();
 
         for(String s : threadTopWord.arrList.get(threadTopWord.partToWork())) {

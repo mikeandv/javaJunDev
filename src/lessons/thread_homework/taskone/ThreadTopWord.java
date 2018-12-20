@@ -52,7 +52,6 @@ public class ThreadTopWord {
         return parts;
     }
     public synchronized int partToWork() {
-        System.out.println(partToWork);
         return partToWork++;
     }
 }
