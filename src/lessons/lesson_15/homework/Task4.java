@@ -7,7 +7,7 @@ import java.util.TreeSet;
 public class Task4 {
 
     public Set<Byte> fileByteSort(File file) {
-        Set<Byte> byteSet = new TreeSet();
+        Set<Byte> byteSet = new TreeSet<>();
 
         try(
                 InputStream in = new FileInputStream(file);
