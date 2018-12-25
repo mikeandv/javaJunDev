@@ -1,4 +1,4 @@
-package lessons.thread_blockin_q_hm;
+package lessons.thread_blockin_q_hm.pizzeria;
 
 public class Order {
     private String name;
