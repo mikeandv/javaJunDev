@@ -26,7 +26,8 @@ public class Transaction implements /*Callable<Boolean>*/ Runnable {
     private boolean acceptTransfer() {
         if (src.getAmount() <= 0
                 || src.getAmount() < amount
-                || amount <= 0) {
+                || amount <= 0
+                || (src.getId() == dst.getId())) {
             return false;
         }
 
